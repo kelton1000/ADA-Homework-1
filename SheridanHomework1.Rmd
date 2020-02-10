@@ -1,3 +1,15 @@
+---
+title: "Sheridan-Homework1"
+author: "Kelton Sheridan"
+date: "2/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
 #Challenge 1
 library(tidyverse)
 
@@ -45,4 +57,5 @@ Lorisoidea <- c("Lorisidae", "Galagidae")
 Lorisformes <- list("Superfamily Lorisoidea" = Lorisoidea)
 Strepsirhini <- list("Infraorder: Lorisformes" = Lorisformes, "Infraorder: Lemuriformes" = Lemuriformes)
 Primates <- list("Suborder: Strepsirhini" = Strepsirhini, "Suborder: Haplorhini" = Haplorhini)
-
+Primates
+```
