@@ -46,3 +46,9 @@ Lorisformes <- list("Superfamily Lorisoidea" = Lorisoidea)
 Strepsirhini <- list("Infraorder: Lorisformes" = Lorisformes, "Infraorder: Lemuriformes" = Lemuriformes)
 Primates <- list("Suborder: Strepsirhini" = Strepsirhini, "Suborder: Haplorhini" = Haplorhini)
 
+nwm <- c(Platyrrhini)
+Primates[[Platyrrhini]]
+
+
+
+

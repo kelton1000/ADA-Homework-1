@@ -1,0 +1,62 @@
+---
+title: "Homework1"
+author: "Kelton Sheridan"
+date: "2/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+#Challenge 1
+library(tidyverse)
+
+string <- c("There is grandeur in this view of life, with its several powers, having been originally breathed by the Creator into a few forms or into one; and that, whilst this planet has gone circling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being evolved.")
+string <- gsub(pattern= "[[:punct:]]", replacement= "", x= string)
+split_quote <- str_split(string, " ")
+split_quote <- unlist(split_quote)
+every_fourth <- split_quote[seq_along(split_quote) %% 4 == 0]
+every_fourth <- sort(x = every_fourth, decreasing = TRUE)
+every_fourth
+
+#Challenge 2
+m1 <- matrix(
+  data = seq (from = 1, to = 159, by = 2),
+  nrow = 8,
+  ncol = 10
+)
+m1 [5, 2]
+m1 [5:7, ]
+m2 = m1[3:6, 4:9]
+class(m2)
+#What is the mode of this variable? 
+#They are all modes
+
+
+#Challenge 3
+a= array(data = 400:1, dim = c(5, 5, 4, 4))
+a [1, 1, 1, 2]
+a [2, 3, 2]
+a [1:5, 1:5, 3, 3]
